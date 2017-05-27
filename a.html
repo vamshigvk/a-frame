@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <title>basic scene</title>
+  </head>
+  <body>
+    <a-scene>
+  <a-assets>
+  
+    <a-asset-item id="tree-obj" src="/home/vce/Desktop/boeing/boeing-747-obj/boeing-747.obj" dynamic-body>
+<a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation></a-asset-item>
+    <a-asset-item id="tree-mtl" src="/home/vce/Desktop/boeing/boeing-747-obj/boeing-747.mtl" dynamic-body>
+<a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation></a-asset-item>
+  </a-assets>
+
+<a-entity position="12.14 5.4 21.8">
+  <a-camera></a-camera>
+</a-entity>
+
+      <a-plane  position="-1.08 -1.58 -12.2" rotation="-90 0 0" scale="1 1 1" width="5" height="20" color="#B2Eb80"></a-plane>
+	<a-plane  position="0 2 -2.01" rotation="0 0 0" scale="12 7.7 2" width="1" height="0.1" color="#D51768"></a-plane>
+<a-plane  position="-3.26 -1.58 -12.2" rotation="-90 0 0" scale="1 1 1" width="0.5" height="20" color="ghostwhite"></a-plane>
+<a-plane  position="1.293 -1.58 -12.2" rotation="-90 0 0" scale="1 1 1" width="0.5" height="20" color="ghoatwhite"></a-plane>
+	
+      <a-sky color="#039CFF"></a-sky>
+	<a-entity text="value: WELCOME TO RGIA" position="8 2 -2" color="#17D56B" scale="25 25 10"></a-entity>
+
+<a-box position="-6.06 0.435 -1.57" scale="1 3.96 1"  height="1" width="0.1" rotation="0 180 0" color="ghostwhite"></a-box>     
+<a-box position="5.98 0.062 -1.50" scale="1.0 4.53 1"  height="1" width="0.1" rotation="0 180 0" color="ghostwhite"></a-box>    
+
+<a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" dynamic-body>
+<a-animation attribute="position" to="15 4 -600" direction="alternate" dur="8000"
+      repeat="indefinite"></a-animation></a-entity>
+	   
+
+</a-scene>
+  </body>
+</html>
+
