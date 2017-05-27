@@ -1,0 +1,50 @@
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <title>basic scene</title>
+  </head>
+  <body>
+<a-scene>
+
+<!-- add files -->
+<a-assets>
+    	
+	<a-asset-item id="tree-obj1" src="/home/vce/Desktop/512/assets/b1.obj" >
+	<a-asset-item id="tree-mtl1" src="/home/vce/Desktop/512/assets/b1.mtl" >
+
+	<a-asset-item id="tree-obj2" src="/home/vce/Desktop/512/assets/house.obj" >
+	<a-asset-item id="tree-mtl2" src="/home/vce/Desktop/512/assets/house.mtl" >
+
+	<a-asset-item id="tree-obj3" src="/home/vce/Desktop/512/assets/castle-tower.obj" >
+	<a-asset-item id="tree-mtl3" src="/home/vce/Desktop/512/assets/castle-tower.mtl" >
+
+	<a-asset-item id="player" src="/home/vce/Desktop/512/assets/player/office-guy.obj" dynamic-body><a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="150" repeat="indefinite"></a-animation></a-asset-item>
+	<a-asset-item id="player" src="/home/vce/Desktop/512/assets/player/office-guy.mtl" dynamic-body><a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="12000" repeat="indefinite"></a-animation></a-asset-item>
+</a-assets>
+
+<!-- camera -->
+<a-entity>
+  <a-camera  position="154 626 1000" rotation="-19.6 2.8 -1.8"></a-camera>
+</a-entity>
+	
+<a-sky color="#039CFF"></a-sky>
+
+
+<!--animation-->
+<a-entity obj-model="obj: #tree-obj1; mtl: #tree-mtl1" scale="0.500 0.500 0.500"></a-entity>
+<a-entity obj-model="obj: #tree-obj2; mtl: #tree-mtl2" scale="0.500 0.500 0.500" position="387 0 -243"></a-entity>
+<a-entity obj-model="obj: #tree-obj2; mtl: #tree-mtl2" scale="0.500 0.500 0.500" position="387 0 76"></a-entity>
+<a-entity obj-model="obj: #tree-obj3; mtl: #tree-mtl3" scale="0.500 0.500 0.500" position="-377 0 38"></a-entity>
+<a-entity obj-model="obj: #tree-obj2; mtl: #tree-mtl2" scale="0.500 0.500 0.500" position="-377 -0 389"></a-entity>
+
+<a-entity obj-model="obj: #player; mtl: #player" scale="0.500 0.500 0.500" position="150 3 389" rotation="13.98 -179 0">
+	<a-animation attribute="position" to="15 3 -900" direction="alternate" dur="12000" repeat="indefinite"></a-animation>
+</a-entity>
+
+</a-entity>
+	   
+</a-scene>
+</body>
+</html>
+
