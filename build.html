@@ -1,0 +1,46 @@
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <title>basic scene</title>
+  </head>
+  <body>
+<a-scene>
+
+<!-- add files -->
+<a-assets>
+    	
+	<a-asset-item id="tree-obj1" src="/home/vce/Desktop/test/GVK/b1.obj" >
+	<a-asset-item id="tree-mtl1" src="/home/vce/Desktop/test/GVK/b1.mtl" >
+
+	<a-asset-item id="tree-obj2" src="/home/vce/Desktop/test/GVK/house.obj" >
+	<a-asset-item id="tree-mtl2" src="/home/vce/Desktop/test/GVK/house.mtl" >
+
+	<a-asset-item id="tree-obj3" src="/home/vce/Desktop/test/GVK/castle-tower.obj" >
+	<a-asset-item id="tree-mtl3" src="/home/vce/Desktop/test/GVK/castle-tower.mtl" >
+
+	<a-asset-item id="player-obj" src="/home/vce/Desktop/test/GVK/office-guy.obj" dynamic-body>
+<a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="150" repeat="indefinite"></a-animation></a-asset-item>
+	<a-asset-item id="player-mtl" src="/home/vce/Desktop/test/GVK/office-guy.mtl" dynamic-body>
+<a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="12000" repeat="indefinite"></a-animation></a-asset-item>
+
+</a-assets>
+
+
+<!--animation-->
+<a-entity id="villa" obj-model="obj: #tree-obj1; mtl: #tree-mtl1" scale="0.01 0.01 0.01" position="50 0 0"></a-entity>
+<a-entity id="house-1" obj-model="obj: #tree-obj2; mtl: #tree-mtl2" scale="0.01 0.01 0.01" position="58.106 0 8.743"></a-entity>
+<a-entity id="house-2" obj-model="obj: #tree-obj2; mtl: #tree-mtl2" scale="0.01 0.01 0.01" position="57.934 0 0.677"></a-entity>
+<a-entity id="man-position" obj-model="obj: #tree-obj3; mtl: #tree-mtl3" scale="0.000001 0.000001 0.000001" position="-30 0 38"></a-entity>
+<a-entity id="house-3" obj-model="obj: #tree-obj2; mtl: #tree-mtl2" scale="0.01 0.01 0.01" position="43.79 0 11.58"></a-entity>
+
+<a-entity obj-model="obj: #player-obj; mtl: #player-mtl" scale="1 1 1" position="150 3 389" rotation="13.98 -179 0" >
+	<a-animation attribute="position" to="15 3 -900" direction="alternate" dur="12000" repeat="indefinite"></a-animation>
+</a-entity>
+
+
+	   
+</a-scene>
+</body>
+</html>
+
